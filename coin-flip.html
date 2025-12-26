@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Coin Flip</title>
+  </head>
+  <body>
+    <script>
+      let randoNumber = Math.random();
+      let result = "";
+      let guess = "heads";
+      result = randoNumber < 0.5 ? "heads" : "tails";
+      console.log(result === guess ? "You win!" : "You lose!");
+      /*      if (randoNumber < 0.5) {
+        console.log("heads");
+        result = "heads";
+      } else {
+        console.log("tails");
+        result = "tails";
+      }*/
+      if (result === guess) {
+        console.log("You win!");
+      } else {
+        console.log("You lose!");
+      }
+    </script>
+  </body>
+</html>
