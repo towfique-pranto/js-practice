@@ -53,21 +53,32 @@
       };
       const object2 = object1;
 
-      object1.message = "Good";
+      object1.message = "Good job";
       console.log(object2);
       object3 = {
-        message: "Good",
+        message: "Good job",
       };
       console.log(object3 === object1);
       console.log(object2 === object1);
 
       object4 = {
-        message: "Good",
+        message: "Good job",
         price: 799,
       };
       const { message, price } = object4; //const message = object4.message; called destructuring
       console.log(message);
       console.log(price);
+
+      const object5 = {
+        //message: message,
+        message,
+        method() {
+          //method: function function1() {
+          console.log("method");
+        },
+      };
+      console.log(object5);
+      object5.method();
     </script>
   </body>
 </html>
