@@ -13,6 +13,11 @@
         wins: 0,
         losses: 0,
       };
+      const savedScore = JSON.parse(localStorage.getItem("score"));
+      if (savedScore) {
+        score.wins = savedScore.wins;
+        score.losses = savedScore.losses;
+      }
       function playGame(guess) {
         const randoNumber = Math.random();
         const result = randoNumber < 0.5 ? "heads" : "tails";
@@ -25,6 +30,7 @@
           score.losses++;
         }
         console.log(score);
+        localStorage.setItem("score", JSON.stringify(score));
       }
     </script>
   </body>
