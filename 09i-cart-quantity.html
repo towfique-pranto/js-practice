@@ -115,8 +115,11 @@
 
     <script>
       let cartQuantity = 0;
+      printValue();
       function printValue() {
-        console.log(`Cart quantity: ${cartQuantity}`);
+        document.querySelector(
+          ".js-CartQuantity"
+        ).innerHTML = `Cart quantity: ${cartQuantity}`;
       }
     </script>
   </body>
