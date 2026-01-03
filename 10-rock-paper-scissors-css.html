@@ -17,24 +17,48 @@
       .move-icon {
         height: 50px;
       }
+      .move-button {
+        background-color: transparent;
+        border: 3px solid white;
+        width: 120px;
+        height: 120px;
+        border-radius: 60px;
+        margin-right: 10px;
+        cursor: pointer;
+      }
+      .result {
+        font-size: 25px;
+        font-weight: bold;
+        margin-top: 50px;
+      }
+      .score {
+        margin-top: 60px;
+      }
+      .reset-score {
+        background-color: white;
+        border: none;
+        font-size: 15px;
+        padding: 8px 15px;
+        cursor: pointer;
+      }
     </style>
   </head>
   <body>
     <p class="title">Rock Paper Scissors</p>
-    <button onclick="playGame('rock');">
+    <button onclick="playGame('rock');" class="move-button">
       <img src="images/rock-emoji.png" class="move-icon" />
     </button>
 
-    <button onclick="playGame('paper');">
+    <button onclick="playGame('paper');" class="move-button">
       <img src="images/paper-emoji.png" class="move-icon" />
     </button>
 
-    <button onclick="playGame('scissors');">
+    <button onclick="playGame('scissors');" class="move-button">
       <img src="images/scissors-emoji.png" class="move-icon" />
     </button>
-    <p class="js-result"></p>
+    <p class="js-result result"></p>
     <p class="js-moves"></p>
-    <p class="js-score"></p>
+    <p class="js-score score"></p>
 
     <button
       onclick="
@@ -44,6 +68,7 @@
         localStorage.removeItem('score');
         updateScoreElement();
         "
+      class="reset-score"
     >
       Reset score
     </button>
@@ -102,7 +127,9 @@
 
         document.querySelector(
           ".js-moves"
-        ).innerHTML = `You picked ${playerMove}. Computer picked ${computerMove}`;
+        ).innerHTML = `You <img src="images/${playerMove}-emoji.png" class="move-icon" /> vs
+      <img src="images/${computerMove}-emoji.png" class="move-icon" />
+      Computer`;
       }
 
       function updateScoreElement() {
