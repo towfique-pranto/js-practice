@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercise 10</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+      }
+      .amazon-button {
+        background-color: rgb(255, 216, 20);
+        padding: 10px 60px;
+        border: none;
+        border-radius: 20px;
+        font-size: 20px;
+        /*font-weight: bold;*/
+      }
+      .uber-request-button {
+        background-color: black;
+        color: white;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 5px;
+        font-weight: bold;
+      }
+      .uber-schedule-button {
+        background-color: rgb(236, 236, 236);
+        padding: 12px 20px;
+        border: none;
+        border-radius: 5px;
+        font-weight: bold;
+      }
+      .gaming-button {
+        background-color: rgb(206, 206, 206);
+        border: none;
+        padding: 10px 15px;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      .is-toggled {
+        background-color: black;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <button class="amazon-button">Add to Cart</button>
+    <button class="uber-request-button">Request now</button>
+    <button class="uber-schedule-button">Schedule for later</button>
+    <hr />
+    <button class="js-button">Test</button>
+    <hr />
+    <button
+      onclick="toggleElementButton('js-gaming-button')"
+      class="gaming-button js-gaming-button"
+    >
+      Gaming
+    </button>
+    <button
+      onclick="toggleElementButton('js-music-button')"
+      class="gaming-button js-music-button"
+    >
+      Music
+    </button>
+    <button
+      onclick="toggleElementButton('js-tech-button')"
+      class="gaming-button js-tech-button"
+    >
+      Tech
+    </button>
+    <script>
+      console.log(
+        document.querySelector(".js-button").classList.contains("js-button")
+      );
+      function toggleElementButton(elementValue) {
+        const buttonElement = document.querySelector(`.${elementValue}`);
+        if (buttonElement.classList.contains("is-toggled")) {
+          buttonElement.classList.remove("is-toggled");
+        } else {
+          buttonElement.classList.add("is-toggled");
+        }
+      }
+    </script>
+  </body>
+</html>
