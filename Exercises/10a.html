@@ -53,19 +53,19 @@
     <hr />
     <button
       onclick="toggleElementButton('js-gaming-button')"
-      class="gaming-button js-gaming-button"
+      class="gaming-button js-gaming-button js-common-button"
     >
       Gaming
     </button>
     <button
       onclick="toggleElementButton('js-music-button')"
-      class="gaming-button js-music-button"
+      class="gaming-button js-music-button js-common-button"
     >
       Music
     </button>
     <button
       onclick="toggleElementButton('js-tech-button')"
-      class="gaming-button js-tech-button"
+      class="gaming-button js-tech-button js-common-button"
     >
       Tech
     </button>
@@ -78,8 +78,18 @@
         if (buttonElement.classList.contains("is-toggled")) {
           buttonElement.classList.remove("is-toggled");
         } else {
+          removeAllActives();
           buttonElement.classList.add("is-toggled");
         }
+      }
+      function removeAllActives() {
+        const gaming = document.querySelector(".js-gaming-button");
+        const music = document.querySelector(".js-music-button");
+        const tech = document.querySelector(".js-tech-button");
+
+        gaming.classList.remove("is-toggled");
+        music.classList.remove("is-toggled");
+        tech.classList.remove("is-toggled");
       }
     </script>
   </body>
