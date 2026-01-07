@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const nums = [10, 20, 30];
+
+      console.log(nums);
+      getLastValue(nums);
+
+      nums[2] = 99;
+      console.log(nums);
+      getLastValue(nums);
+
+      getLastValue(["hi", "hello", "good"]);
+
+      arraySwap([1, 20, 22, 24, 5]);
+
+      function getLastValue(array) {
+        const lastIndex = array.length - 1;
+        //return array[lastIndex];
+        console.log(array[lastIndex]);
+      }
+
+      function arraySwap(array) {
+        const swappedArray = [];
+        for (i = 0; i < array.length; i++) {
+          const lastIndex = array.length - 1;
+          swappedArray[i] = array[lastIndex - i];
+        }
+        console.log(swappedArray);
+      }
+    </script>
+  </body>
+</html>
