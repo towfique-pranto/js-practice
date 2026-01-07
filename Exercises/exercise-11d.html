@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>exercise 11</title>
+  </head>
+  <body>
+    <script>
+      /*
+      for (i = 0; i <= 10; i += 2) {
+        console.log(i);
+      }*/ /*
+      for (i = 5; i >= 0; i--) {
+        console.log(i);
+      }*/ /*
+      let i = 0;
+      while (i <= 10) {
+        console.log(i);
+        i += 2;
+      }*/
+      const arrayOld = [1, 2, 3];
+      arrayAnother = [-2, -1, 0, 99];
+      addOne(arrayOld);
+      addOne(arrayAnother);
+      function addOne(array) {
+        const arrayNew = [];
+        for (i = 0; i < array.length; i++) {
+          arrayNew[i] = array[i] + 1;
+        }
+        console.log(arrayNew);
+      }
+    </script>
+  </body>
+</html>
