@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercise11n</title>
+  </head>
+  <body>
+    <script>
+      countWords(["apple", "grape", "apple", "apple"]);
+
+      function countWords(words) {
+        const outputObj = {};
+        for (let i = 0; i < words.length; i++) {
+          const word = words[i];
+          if (outputObj[word]) {
+            outputObj[word] += 1;
+          } else {
+            outputObj[word] = 1;
+          }
+        }
+        console.log(outputObj);
+      }
+    </script>
+  </body>
+</html>
