@@ -19,7 +19,7 @@
         console.log(i);
         i += 2;
       }*/
-      const arrayOld = [1, 2, 3];
+      /*      const arrayOld = [1, 2, 3];
       arrayAnother = [-2, -1, 0, 99];
       addOne(arrayOld);
       addOne(arrayAnother);
@@ -29,6 +29,14 @@
           arrayNew[i] = array[i] + 1;
         }
         console.log(arrayNew);
+      }*/
+      addArrays([1, 1, 2], [1, 1, 3]);
+      function addArrays(array1, array2) {
+        let arrayResult = [];
+        for (let i = 0; i < array1.length; i++) {
+          arrayResult[i] = array1[i] + array2[i];
+        }
+        console.log(arrayResult);
       }
     </script>
   </body>
