@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /*
+            const array1 = ["hello", "world", "search", "good"];
+
+            let isFound = 0;
+            for (let i = 0; i < array1.length; i++) {
+              if (array1[i] === "search") {
+                console.log(i);
+                isFound = 1;
+                break;
+              }
+            }
+            if (isFound === 0) {
+              console.log("-1");
+            }*/
+      console.log(findIndex(["green", "red", "blue", "red"], "red"));
+      function findIndex(array, word) {
+        let index = -1;
+        for (let i = 0; i < array.length; i++) {
+          if (array[i] === word) {
+            index = i;
+            break;
+          }
+        }
+        return index;
+      }
+    </script>
+  </body>
+</html>
