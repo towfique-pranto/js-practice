@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>App</title>
+  </head>
+  <body>
+    <button onclick="increaseNum()">Add</button>
+    <button onclick="decreaseNum()">Remove</button>
+
+    <script>
+      let intervalID = setInterval(changeTitle, 1000);
+      let messageNum = 2;
+
+      function increaseNum() {
+        if (messageNum === 0) {
+          messageNum++;
+          intervalID = setInterval(changeTitle, 1000);
+        } else {
+          messageNum++;
+        }
+      }
+      function decreaseNum() {
+        if (messageNum > 0) {
+          messageNum--;
+        }
+        if (messageNum === 0) {
+          document.title = "App";
+          clearInterval(intervalID);
+        }
+      }
+      function changeTitle() {
+        let currentTitle = document.title;
+        if (currentTitle === "App") {
+          document.title = `(${messageNum}) New message`;
+        } else {
+          document.title = "App";
+        }
+      }
+    </script>
+  </body>
+</html>
