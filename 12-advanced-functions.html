@@ -6,7 +6,19 @@
     <title>Advanced Functions</title>
   </head>
   <body>
+    <button class="js-button">Click</button>
     <script>
+      const buttonElement = document.querySelector(".js-button");
+
+      const eventListener = () => {
+        console.log("click");
+      };
+      buttonElement.addEventListener("click", eventListener);
+      //buttonElement.removeEventListener("click", eventListener);
+
+      buttonElement.addEventListener("click", () => {
+        console.log("click2");
+      });
       /*
       function greeting() {
         console.log("hello");
@@ -56,7 +68,7 @@
         console.log("interval");
       }, 3000);
       console.log("next line2");*/
-
+      /*
       ["make dinner", "wash dishes", "watch youtube"].forEach(
         (value, index) => {
           if (value === "wash dishes") {
@@ -81,6 +93,10 @@
       };
       const oneLine = () => 2 + 3;
       console.log(oneLine());
+
+      const object2 = {
+        method() {},
+      };*/
     </script>
   </body>
 </html>
