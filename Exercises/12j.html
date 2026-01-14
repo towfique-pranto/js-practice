@@ -7,6 +7,7 @@
   </head>
   <body>
     <script>
+      /*
       const multiply = (value, value2) => value * value2;
       console.log(multiply(2, 3));
 
@@ -24,6 +25,19 @@
         return resultValue;
       }
       console.log(addNum([1, 2, 3], 2));
+*/
+      function removeEgg(food) {
+        let count = 0;
+        return food.filter((element) => {
+          if (element === "egg" && count < 2) {
+            count++;
+            return false;
+          }
+          return true;
+        });
+      }
+
+      console.log(removeEgg(["egg", "apple", "egg", "egg", "ham"]));
     </script>
   </body>
 </html>
