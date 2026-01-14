@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const multiply = (value, value2) => value * value2;
+      console.log(multiply(2, 3));
+
+      function countPositive(nums) {
+        let count = 0;
+        nums.forEach((element) => {
+          if (element >= 0) count++;
+        });
+        return count;
+      }
+      console.log(countPositive([-2, 3, -5, 7, 10]));
+
+      function addNum(array, num) {
+        const resultValue = array.map((value) => value + num);
+        return resultValue;
+      }
+      console.log(addNum([1, 2, 3], 2));
+    </script>
+  </body>
+</html>
