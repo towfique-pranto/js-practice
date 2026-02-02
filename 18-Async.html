@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Async JavaScript</title>
+  </head>
+  <body>
+    <button class="js-btn">Click</button>
+    <script>
+      //setTimeout
+      setTimeout(() => {
+        console.log("Waiting for 1 second");
+      }, 1000);
+
+      //nested SetTimeouts
+      setTimeout(() => {
+        console.log("3");
+        setTimeout(() => {
+          console.log("2");
+          setTimeout(() => {
+            console.log("1");
+          }, 1000);
+        }, 1000);
+      }, 1000);
+
+      //button event handler
+      const btn = document.querySelector(".js-btn");
+      btn.addEventListener("click", () => {
+        console.log("button clicked!");
+      });
+
+      //promise
+      const myPromise = new Promise((resolve, reject) => {
+        const randomNum = Math.floor(Math.random() * 100);
+        if (randomNum > 10) {
+          resolve(randomNum);
+        } else {
+          reject(new Error("Number is too small"));
+        }
+      });
+
+      myPromise
+        .then((num) => console.log("myPromise resolved:", num))
+        .catch((err) => console.log("myPromise rejected:", err));
+    </script>
+  </body>
+</html>
