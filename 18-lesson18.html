@@ -7,6 +7,7 @@
   </head>
   <body>
     <script>
+      //18a.
       const xhr = new XMLHttpRequest();
 
       xhr.addEventListener("load", () => {
@@ -16,6 +17,7 @@
       xhr.open("GET", "https://supersimplebackend.dev/greeting");
       xhr.send();
 
+      //18b.
       fetch("https://supersimplebackend.dev/greeting")
         .then((response) => {
           return response.text();
@@ -24,6 +26,7 @@
           console.log(data);
         });
 
+      //18c.
       fetchData();
 
       async function fetchData() {
@@ -31,6 +34,35 @@
           const response = await fetch(
             "https://supersimplebackend.dev/greeting",
           );
+          const data = await response.text();
+          console.log(data);
+        } catch (error) {
+          console.error(`Unexpected error: ${error}`);
+        }
+      }
+
+      //18d.
+      const newUser = {
+        name: "Towfique Kabir",
+      };
+      postData();
+
+      async function postData() {
+        try {
+          const response = await fetch(
+            "https://supersimplebackend.dev/greeting",
+            {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+              },
+              body: JSON.stringify(newUser),
+            },
+          );
+
+          if (!response.ok) {
+            throw new Error(`HTTP error! ${response.status}`);
+          }
           const data = await response.text();
           console.log(data);
         } catch (error) {
