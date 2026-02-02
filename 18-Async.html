@@ -30,19 +30,19 @@
         console.log("button clicked!");
       });
 
-      //promise
-      const myPromise = new Promise((resolve, reject) => {
-        const randomNum = Math.floor(Math.random() * 100);
-        if (randomNum > 10) {
-          resolve(randomNum);
-        } else {
-          reject(new Error("Number is too small"));
-        }
-      });
-
-      myPromise
-        .then((num) => console.log("myPromise resolved:", num))
-        .catch((err) => console.log("myPromise rejected:", err));
+      //callback
+      function orderPizza(callback) {
+        console.log("ordering pizza");
+        setTimeout(() => {
+          const pizza = "pizza";
+          console.log("pizza is ready");
+          callback(pizza);
+        }, 2000);
+      }
+      function pizzaReady(pizza) {
+        console.log(`Eat the ${pizza}`);
+      }
+      orderPizza(pizzaReady);
     </script>
   </body>
 </html>
