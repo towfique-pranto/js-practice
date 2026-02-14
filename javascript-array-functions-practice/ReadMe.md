@@ -1,41 +1,35 @@
 # Quick JavaScript Array Functions Practice
 
-Want to learn how to use JavaScript array functions like map, reduce, filter, etc? Use this worksheet and the corresponding videos to figure out how!
-
-## Sample Data
-
-Here's a sample piece of Star Wars data from the [Star Wars API](https://swapi.dev/).
-
 ```javascript
 const characters = [
-    {
-        name: 'Luke Skywalker',
-        height: '172',
-        mass: '77',
-        eye_color: 'blue',
-        gender: 'male',
-    },
-    {
-        name: 'Darth Vader',
-        height: '202',
-        mass: '136',
-        eye_color: 'yellow',
-        gender: 'male',
-    },
-    {
-        name: 'Leia Organa',
-        height: '150',
-        mass: '49',
-        eye_color: 'brown',
-        gender: 'female',
-    },
-    {
-        name: 'Anakin Skywalker',
-        height: '188',
-        mass: '84',
-        eye_color: 'blue',
-        gender: 'male',
-    },
+  {
+    name: "Luke Skywalker",
+    height: "172",
+    mass: "77",
+    eye_color: "blue",
+    gender: "male",
+  },
+  {
+    name: "Darth Vader",
+    height: "202",
+    mass: "136",
+    eye_color: "yellow",
+    gender: "male",
+  },
+  {
+    name: "Leia Organa",
+    height: "150",
+    mass: "49",
+    eye_color: "brown",
+    gender: "female",
+  },
+  {
+    name: "Anakin Skywalker",
+    height: "188",
+    mass: "84",
+    eye_color: "blue",
+    gender: "male",
+  },
 ];
 ```
 
